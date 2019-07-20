@@ -41,6 +41,10 @@ function onCommandRight() {
     move(state.robotPosition + 1);
 }
 
+function onCommandLeft() {
+    move(state.robotPosition - 1);
+}
+
 function onReverse() {
     state = histories.pop();
     render();
