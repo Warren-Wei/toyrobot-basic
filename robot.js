@@ -16,7 +16,8 @@ function availablePosition(newPosition, mapSize) {
 
 function move(newPosition) {
     if (availablePosition(newPosition, state.mapSize)) {
-        histories.push(state);
+        var oldState = Object.assign({}, state);
+        histories.push(oldState);
         state.robotPosition = newPosition;
         render();
         return true;
